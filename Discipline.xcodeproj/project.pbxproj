@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		BCC06F5B2DB96EE5001E9050 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = BCC06F5A2DB96EDE001E9050 /* README.md */; };
+		BCC06F5D2DB96F08001E9050 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = BCC06F5C2DB96F03001E9050 /* .gitignore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		BCC06F3E2DB96ED0001E9050 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +32,8 @@
 		BCC06F2A2DB96ECF001E9050 /* Discipline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Discipline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCC06F3D2DB96ED0001E9050 /* DisciplineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DisciplineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCC06F472DB96ED0001E9050 /* DisciplineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DisciplineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCC06F5A2DB96EDE001E9050 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		BCC06F5C2DB96F03001E9050 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -75,6 +82,8 @@
 		BCC06F212DB96ECF001E9050 = {
 			isa = PBXGroup;
 			children = (
+				BCC06F5C2DB96F03001E9050 /* .gitignore */,
+				BCC06F5A2DB96EDE001E9050 /* README.md */,
 				BCC06F2C2DB96ECF001E9050 /* Discipline */,
 				BCC06F402DB96ED0001E9050 /* DisciplineTests */,
 				BCC06F4A2DB96ED0001E9050 /* DisciplineUITests */,
@@ -212,6 +221,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCC06F5D2DB96F08001E9050 /* .gitignore in Resources */,
+				BCC06F5B2DB96EE5001E9050 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
