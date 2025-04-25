@@ -11,51 +11,44 @@ import SwiftData
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var items: [Item]
-
+    
     var body: some View {
-        NavigationSplitView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
-                    }
-                }
-                .onDelete(perform: deleteItems)
+        TabView {
+            VStack {
+                Text("Workouts")
+                    .font(.largeTitle)
+                    .foregroundColor(.white)
+                    .background(Color.blue)
             }
-#if os(macOS)
-            .navigationSplitViewColumnWidth(min: 180, ideal: 200)
-#endif
-            .toolbar {
-#if os(iOS)
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-#endif
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
+            .tabItem {
+                Image(systemName: "figure.strengthtraining.functional")
+                Text("Workouts")
             }
-        } detail: {
-            Text("Select an item")
-        }
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
+            .tag(0)
+            
+            VStack {
+                Text("Exercises")
+                    .font(.largeTitle)
+                    .foregroundColor(.white)
+                    .background(Color.gray)
             }
+            .tabItem {
+                Image(systemName: "dumbbell.fill")
+                Text("Exercises")
+            }
+            .tag(1)
+            
+            VStack {
+                Text("History")
+                    .font(.largeTitle)
+                    .foregroundColor(.white)
+                    .background(Color.green)
+            }
+            .tabItem {
+                Image(systemName: "list.bullet.clipboard.fill")
+                Text("History")
+            }
+            .tag(2)
         }
     }
 }
