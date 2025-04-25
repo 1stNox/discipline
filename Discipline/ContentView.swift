@@ -15,38 +15,38 @@ struct ContentView: View {
     var body: some View {
         TabView {
             VStack {
-                Text("Home View")
+                Text("Workouts")
                     .font(.largeTitle)
                     .foregroundColor(.white)
                     .background(Color.blue)
             }
             .tabItem {
-                Image(systemName: "house.fill")
-                Text("Home")
+                Image(systemName: "figure.strengthtraining.functional")
+                Text("Workouts")
             }
             .tag(0)
             
             VStack {
-                Text("Search View")
+                Text("Exercises")
                     .font(.largeTitle)
                     .foregroundColor(.white)
                     .background(Color.gray)
             }
             .tabItem {
-                Image(systemName: "magnifyingglass")
-                Text("Search")
+                Image(systemName: "dumbbell.fill")
+                Text("Exercises")
             }
             .tag(1)
             
             VStack {
-                Text("Profile View")
+                Text("History")
                     .font(.largeTitle)
                     .foregroundColor(.white)
                     .background(Color.green)
             }
             .tabItem {
-                Image(systemName: "person.fill")
-                Text("Profile")
+                Image(systemName: "list.bullet.clipboard.fill")
+                Text("History")
             }
             .tag(2)
         }
